@@ -1,6 +1,8 @@
 ; BolFlow Windows installer (Inno Setup 6)
 ; Build:  ISCC.exe installer.iss   (after: pyinstaller bolflow.spec)
-; Output: installer-out\BolFlow-Setup-1.0.exe
+; Output: installer-out\BolFlow-Setup.exe (version-less name on purpose:
+; the website's download button uses the stable releases/latest/download
+; URL, which only works if every release uploads the same filename)
 
 [Setup]
 AppId={{7B1F0B6E-9C2A-4D5B-B7E1-B0LF10W00001}
@@ -13,7 +15,7 @@ DisableProgramGroupPage=yes
 PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
 OutputDir=installer-out
-OutputBaseFilename=BolFlow-Setup-1.0
+OutputBaseFilename=BolFlow-Setup
 SetupIconFile=app.ico
 UninstallDisplayIcon={app}\BolFlow.exe
 Compression=lzma2
