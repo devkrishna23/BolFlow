@@ -12,8 +12,6 @@
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-0078D6)](https://devkrishna23.github.io/BolFlow)
 [![Website](https://img.shields.io/badge/website-live-FAC775)](https://devkrishna23.github.io/BolFlow)
 
-<img src="assets/demo.gif" width="720" alt="Dictating a sentence with BolFlow: the pill listens, then the text pastes at the cursor">
-
 </div>
 
 Hold a hotkey, speak in Hindi, English, Hinglish, or any of 22 Indian
