@@ -8,7 +8,7 @@
 AppId={{7B1F0B6E-9C2A-4D5B-B7E1-B0LF10W00001}
 AppName=BolFlow
 AppVersion=1.0
-AppPublisher=Krishna Vijayvargiya
+AppPublisher=devkrishna23
 AppPublisherURL=https://github.com/devkrishna23/BolFlow
 DefaultDirName={autopf}\BolFlow
 DisableProgramGroupPage=yes

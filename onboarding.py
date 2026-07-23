@@ -81,7 +81,7 @@ class Api:
             return {"ok": False, "error": last_error}
         if r.status_code in (401, 403):
             return {"ok": False,
-                    "error": "Key rejected. Copy it again from dashboard.sarvam.ai"}
+                    "error": "Key rejected. Copy it again from platform.sarvam.ai"}
         if r.status_code >= 500:
             return {"ok": False, "error": "Sarvam is having trouble. Try again"}
         _save_key(key)
@@ -158,7 +158,7 @@ textarea:focus { border-color:#EF9F27; }
     <input type="text" id="key" placeholder="sk_..." spellcheck="false">
     <button class="btn" id="verify">Verify</button>
   </div>
-  <div class="status" id="s1status">Get a free key at dashboard.sarvam.ai</div>
+  <div class="status" id="s1status">Get a free key at platform.sarvam.ai</div>
 </div>
 
 <div id="s2" style="display:none">

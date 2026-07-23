@@ -11,7 +11,7 @@ English. (Prefer Devanagari? Switch to native script from the tray menu.)
 **Website:** [devkrishna23.github.io/BolFlow](https://devkrishna23.github.io/BolFlow)
 
 **Bring your own key:** transcription uses Sarvam's cloud API, so you need a
-free API key from [dashboard.sarvam.ai](https://dashboard.sarvam.ai) and
+free API key from [platform.sarvam.ai](https://platform.sarvam.ai) and
 dictation spends your Sarvam credits. Audio leaves your machine (to Sarvam);
 filler-word cleanup runs locally as a lightweight text pass.
 
