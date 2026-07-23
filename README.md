@@ -1,4 +1,20 @@
-# BolFlow: voice dictation for Bharat
+<div align="center">
+
+<img src="assets/logo.png" width="110" alt="BolFlow logo">
+
+# BolFlow
+
+**Voice dictation for Bharat.** Hold a key, speak in Hinglish or any of
+22 Indian languages, and clean text appears wherever your cursor is.
+
+[![Latest release](https://img.shields.io/github/v/release/devkrishna23/BolFlow?color=EF9F27&label=download)](https://github.com/devkrishna23/BolFlow/releases/latest)
+[![License](https://img.shields.io/github/license/devkrishna23/BolFlow?color=97C459)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-0078D6)](https://devkrishna23.github.io/BolFlow)
+[![Website](https://img.shields.io/badge/website-live-FAC775)](https://devkrishna23.github.io/BolFlow)
+
+<img src="assets/demo.gif" width="720" alt="Dictating a sentence with BolFlow: the pill listens, then the text pastes at the cursor">
+
+</div>
 
 Hold a hotkey, speak in Hindi, English, Hinglish, or any of 22 Indian
 languages, release, and clean, punctuated text appears at the cursor in
