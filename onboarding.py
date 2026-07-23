@@ -57,19 +57,28 @@ class Api:
         key = (key or "").strip()
         if not key:
             return {"ok": False, "error": "Enter a key first"}
-        try:
-            import time
-            t0 = time.perf_counter()
-            r = httpx.post(
-                "https://api.sarvam.ai/speech-to-text",
-                headers={"api-subscription-key": key},
-                files={"file": ("t.wav", _test_wav(), "audio/wav")},
-                data={"model": config.SARVAM_MODEL, "mode": "transcribe",
-                      "language_code": "unknown"},
-                timeout=20.0)
-            latency = time.perf_counter() - t0
-        except httpx.HTTPError as e:
-            return {"ok": False, "error": f"No connection: {e.__class__.__name__}"}
+        import time
+        last_error = "Couldn't reach Sarvam"
+        for attempt in (1, 2):        # slow networks deserve a second try
+            try:
+                t0 = time.perf_counter()
+                r = httpx.post(
+                    "https://api.sarvam.ai/speech-to-text",
+                    headers={"api-subscription-key": key},
+                    files={"file": ("t.wav", _test_wav(), "audio/wav")},
+                    data={"model": config.SARVAM_MODEL, "mode": "transcribe",
+                          "language_code": "unknown"},
+                    timeout=60.0)
+                latency = time.perf_counter() - t0
+                break
+            except httpx.TimeoutException:
+                last_error = ("Sarvam is taking too long on this connection. "
+                              "Check your internet and try once more")
+            except httpx.HTTPError:
+                last_error = ("Couldn't reach Sarvam. Check your internet "
+                              "(or firewall/proxy) and try again")
+        else:
+            return {"ok": False, "error": last_error}
         if r.status_code in (401, 403):
             return {"ok": False,
                     "error": "Key rejected. Copy it again from dashboard.sarvam.ai"}
