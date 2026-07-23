@@ -1,0 +1,21 @@
+# virtualenv
+.venv/
+
+# runtime artifacts — the log contains dictated text (personal data)
+bolflow.log
+settings.json
+__pycache__/
+*.pyc
+
+# local scratch
+*.wav
+
+# build outputs
+build/
+dist/
+installer-out/
+
+# internal working notes, not part of the distribution
+CLAUDE.md
+SPEC.md
+NOTES.md
