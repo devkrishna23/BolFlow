@@ -1,0 +1,9 @@
+numpy==2.5.0
+sounddevice==0.5.5
+pynput==1.8.2
+pyperclip==1.11.0
+httpx==0.28.1
+sarvamai==0.1.28
+pystray==0.19.5
+pywebview==6.2.1
+pillow==12.3.0
