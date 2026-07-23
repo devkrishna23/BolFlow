@@ -27,9 +27,13 @@ nav a:hover { color:var(--txt); }
 .hero h1 .devanagari { color:var(--saffron); }
 .hero p.sub { color:var(--dim); font-size:18px; max-width:600px;
               margin:18px auto 34px; }
+.ctarow { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
 .cta { display:inline-block; background:var(--saffron); color:#1a1206;
        font-weight:600; font-size:16px; padding:14px 34px; border-radius:10px; }
 .cta:hover { background:var(--gold); }
+.cta2 { background:transparent; color:var(--gold);
+        border:1.5px solid var(--saffron); }
+.cta2:hover { background:#2a2318; color:var(--gold); }
 .cta-sub { display:block; color:var(--dim); font-size:12.5px; margin-top:10px; }
 .ribbon { margin:46px auto 0; max-width:680px; }
 .pill { background:var(--bg2); border:1px solid var(--line); border-radius:18px;
@@ -83,8 +87,11 @@ footer { border-top:1px solid var(--line); padding:30px 0; color:var(--dim);
   <p class="sub">Hold a key, speak in any of 22 Indian languages (or the
   Hinglish you actually speak) and clean text appears wherever your cursor
   is. WhatsApp, email, code editor, anywhere on Windows.</p>
-  <a class="cta" href="https://github.com/devkrishna23/BolFlow/releases/latest/download/BolFlow-Setup.exe">
-    Download for Windows</a>
+  <div class="ctarow">
+    <a class="cta" href="https://github.com/devkrishna23/BolFlow/releases/latest/download/BolFlow-Setup-1.0.exe">
+      Download for Windows</a>
+    <a class="cta cta2" href="https://platform.sarvam.ai/">Get Sarvam API key</a>
+  </div>
   <span class="cta-sub">Free and open source · Windows 10/11 ·
     bring your own Sarvam AI key</span>
   <div class="ribbon">
@@ -130,7 +137,7 @@ footer { border-top:1px solid var(--line); padding:30px 0; color:var(--dim);
     <div class="step"><b>Install</b><p>Download and run BolFlow-Setup.
       No Python, no dependencies, no command line.</p></div>
     <div class="step"><b>Paste your free key</b><p>Onboarding opens on first
-      launch: grab a free API key from dashboard.sarvam.ai, paste it, and
+      launch: grab a free API key from platform.sarvam.ai, paste it, and
       it's verified with a live call.</p></div>
     <div class="step"><b>Speak</b><p>The built-in test box lets you try it
       immediately. Then it lives quietly in your tray.</p></div>
