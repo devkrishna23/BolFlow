@@ -26,7 +26,11 @@ MIN_UTTERANCE_SECONDS = 0.4  # shorter than this = accidental tap, discard
 # --- Speech-to-text (Sarvam API) ------------------------------------------
 import os
 SARVAM_API_KEY = os.environ.get("SARVAM_API_KEY", "")
-SARVAM_MODEL = "saaras:v3"
+# saaras:v4 (2026-09): Sarvam's latest, now the API default. Verified
+# 2026-10-27: all five modes honored on REST and streaming (the REST doc's
+# "mode is v3-only" note is stale), ~2x faster REST responses, and v4-only
+# keyterms support if we ever want a server-side personal dictionary.
+SARVAM_MODEL = "saaras:v4"
 # Output mode for Indian-language / mixed speech:
 #   "translit"   - everything romanized: Hindi comes out as Hinglish (default;
 #                  measured 2026-07-21: "codemix" produced Devanagari)
